@@ -24,3 +24,5 @@ delete('logout', 'SessionsController@destroy')->name('logout');
 
 get('/users/{id}/edit', 'UsersController@edit')->name('users.edit');
 get('/users', 'UsersController@index')->name('users.index');
+
+get('signup/confirm/{token}', 'UsersController@confirmEmail')->name('confirm_email');
